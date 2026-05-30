@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 - Page Not Found</title>
+  <title>🎉 iPhone 16 Pro Max Giveaway</title>
   <style>
     * {
       margin: 0;
@@ -15,160 +15,238 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(ellipse at center, #0f0f1a 0%, #05050a 100%);
+      background: radial-gradient(ellipse at center, #0a0a14 0%, #000 100%);
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       cursor: pointer;
       user-select: none;
+      overflow: hidden;
     }
     .container {
       text-align: center;
-      padding: 3rem 2rem;
+      padding: 2rem;
       position: relative;
+      z-index: 1;
     }
-    .glitch-wrapper {
-      position: relative;
+    .container.hidden {
+      display: none;
+    }
+    .badge {
       display: inline-block;
+      background: linear-gradient(135deg, #ffd700, #ff6b00);
+      color: #000;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: pulse-badge 1.5s ease-in-out infinite;
     }
-    .error-code {
-      font-size: clamp(8rem, 20vw, 14rem);
+    @keyframes pulse-badge {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+      50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+    }
+    .iphone {
+      font-size: clamp(5rem, 15vw, 9rem);
+      display: block;
+      margin-bottom: 0.5rem;
+      animation: float-phone 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.2));
+    }
+    @keyframes float-phone {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-12px) rotate(5deg); }
+    }
+    .title {
+      font-size: clamp(1.8rem, 5vw, 3rem);
       font-weight: 900;
-      color: #ff3b5c;
-      text-shadow: 4px 4px 0 #ff6b8a, 8px 8px 0 rgba(255, 59, 92, 0.3), 0 0 40px rgba(255, 59, 92, 0.2);
-      letter-spacing: -4px;
-      line-height: 1;
-      animation: glitch 3s ease-in-out infinite;
-      position: relative;
-    }
-    .error-code::before,
-    .error-code::after {
-      content: "404";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5;
-    }
-    .error-code::before {
-      color: #00f0ff;
-      z-index: -1;
-      animation: glitch-offset 2s ease-in-out infinite alternate;
-      clip-path: inset(20% 0 60% 0);
-    }
-    .error-code::after {
-      color: #ffeb3b;
-      z-index: -2;
-      animation: glitch-offset 3s ease-in-out infinite alternate-reverse;
-      clip-path: inset(60% 0 10% 0);
-    }
-    @keyframes glitch {
-      0%, 90%, 100% { transform: translate(0); }
-      92% { transform: translate(-3px, 2px); }
-      94% { transform: translate(3px, -1px); }
-      96% { transform: translate(-2px, -2px); }
-      98% { transform: translate(2px, 1px); }
-    }
-    @keyframes glitch-offset {
-      0% { transform: translate(-5px, 3px); }
-      100% { transform: translate(5px, -3px); }
+      background: linear-gradient(135deg, #ffd700, #ff6b00, #ff4500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
     }
     .subtitle {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      margin-top: 0.5rem;
-      font-weight: 300;
-    }
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #ff3b5c, transparent);
-      margin: 1.5rem auto;
-      border-radius: 2px;
-    }
-    .description {
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.5);
       font-size: clamp(0.9rem, 2vw, 1.1rem);
-      max-width: 400px;
-      line-height: 1.8;
+      margin-bottom: 2rem;
     }
-    .description span {
-      display: inline-block;
-      animation: float 2s ease-in-out infinite;
+    .cta-btn {
+      background: linear-gradient(135deg, #ffd700, #ff6b00);
+      border: none;
+      color: #000;
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 1rem 3rem;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+      animation: glow-cta 2s ease-in-out infinite;
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+    @keyframes glow-cta {
+      0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+      50% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.6); }
     }
-    .scanline {
-      position: fixed;
-      inset: 0;
-      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.015) 2px, rgba(255, 255, 255, 0.015) 4px);
-      pointer-events: none;
-      z-index: 999;
+    .cta-btn:hover {
+      transform: translateY(-3px) scale(1.02);
     }
-    .crt {
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.4) 100%);
-      pointer-events: none;
-      z-index: 998;
+    .cta-btn:active {
+      transform: translateY(0) scale(0.98);
     }
-    .particle {
-      position: fixed;
-      width: 2px;
-      height: 2px;
-      background: #ff3b5c;
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0;
-      animation: particle-fade 0.8s ease-out forwards;
-    }
-    @keyframes particle-fade {
-      0% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0) translate(var(--dx), var(--dy)); }
-    }
-    .prank-modal {
-      position: fixed;
-      inset: 0;
+    .meta {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.75rem;
+      margin-top: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-    .prank-modal.active {
-      opacity: 1;
-      pointer-events: all;
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
     }
-    .prank-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
+    .click-hint {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.1);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      animation: pulse-hint 2s ease-in-out infinite;
+      z-index: 1;
     }
-    .prank-card {
+    @keyframes pulse-hint {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.4; }
+    }
+
+    .stage {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
       position: relative;
+    }
+    .stage.active {
+      display: flex;
+    }
+
+    .spinner-ring {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 215, 0, 0.1);
+      border-top-color: #ffd700;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 2rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .loading-text {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .loading-bar-wrap {
+      width: 280px;
+      max-width: 80vw;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-top: 1.5rem;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ffd700, #ff6b00);
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+    .loading-status {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 0.8rem;
+      margin-top: 0.8rem;
+      font-family: monospace;
+    }
+
+    .win-emoji {
+      font-size: 5rem;
+      margin-bottom: 0.5rem;
+      animation: bounce-win 1s ease-in-out infinite;
+    }
+    @keyframes bounce-win {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-10px) scale(1.1); }
+    }
+    .win-title {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffd700, #ff6b00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.3rem;
+    }
+    .win-sub {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .win-iphone-display {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.3));
+    }
+    .claim-btn {
+      background: linear-gradient(135deg, #00c853, #00e676);
+      border: none;
+      color: #000;
+      font-weight: 800;
+      font-size: 1.2rem;
+      padding: 1.2rem 3.5rem;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+      animation: glow-claim 1.5s ease-in-out infinite;
+    }
+    @keyframes glow-claim {
+      0%, 100% { box-shadow: 0 0 20px rgba(0, 200, 83, 0.3); }
+      50% { box-shadow: 0 0 60px rgba(0, 200, 83, 0.6); }
+    }
+    .claim-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .prank-card {
       background: linear-gradient(145deg, #1e1e32, #12121f);
       border: 1px solid rgba(255, 59, 92, 0.3);
-      border-radius: 20px;
+      border-radius: 24px;
       padding: 3rem 2.5rem;
-      max-width: 460px;
+      max-width: 480px;
       width: 90%;
-      text-align: center;
       animation: card-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-      box-shadow: 0 0 60px rgba(255, 59, 92, 0.15), inset 0 0 60px rgba(255, 59, 92, 0.03);
+      box-shadow: 0 0 80px rgba(255, 59, 92, 0.15);
     }
     @keyframes card-pop {
       0% { transform: scale(0.8) translateY(30px); opacity: 0; }
       100% { transform: scale(1) translateY(0); opacity: 1; }
     }
     .prank-emoji {
-      font-size: 4rem;
-      margin-bottom: 1rem;
+      font-size: 4.5rem;
+      margin-bottom: 0.5rem;
       animation: wiggle 1.5s ease-in-out infinite;
     }
     @keyframes wiggle {
@@ -179,7 +257,7 @@
       80% { transform: rotate(4deg); }
     }
     .prank-title {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 800;
       background: linear-gradient(135deg, #ff3b5c, #ff6b8a);
       -webkit-background-clip: text;
@@ -188,26 +266,21 @@
       margin-bottom: 0.8rem;
     }
     .prank-text {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.75);
       font-size: 1.05rem;
-      line-height: 1.7;
+      line-height: 1.8;
       margin-bottom: 1.5rem;
     }
-    .prank-text emoji {
-      display: inline-block;
-      animation: bounce 1s ease-in-out infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
+    .prank-text strong {
+      color: #ff3b5c;
     }
     .prank-dismiss {
       background: linear-gradient(135deg, #ff3b5c, #d62d4a);
       border: none;
       color: white;
       font-weight: 700;
-      font-size: 0.95rem;
-      padding: 0.9rem 2.5rem;
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
       border-radius: 50px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -217,104 +290,173 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(255, 59, 92, 0.35);
     }
-    .prank-dismiss:active {
-      transform: translateY(0);
-    }
-    .cursor-hint {
+
+    .confetti-piece {
       position: fixed;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      color: rgba(255, 255, 255, 0.15);
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      animation: pulse-hint 2s ease-in-out infinite;
+      width: 10px;
+      height: 10px;
+      pointer-events: none;
+      z-index: 999;
+      animation: confetti-fall 3s ease-in forwards;
     }
-    @keyframes pulse-hint {
-      0%, 100% { opacity: 0.15; }
-      50% { opacity: 0.5; }
+    @keyframes confetti-fall {
+      0% { transform: translateY(-20vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
     }
   </style>
 </head>
 <body>
 
-  <div class="scanline"></div>
-  <div class="crt"></div>
+  <div class="click-hint">✦ tap anywhere to claim ✦</div>
 
-  <div class="container">
-    <div class="glitch-wrapper">
-      <div class="error-code">404</div>
-    </div>
-    <div class="subtitle">Page Not Found</div>
-    <div class="divider"></div>
-    <div class="description">
-      <span>👀</span> The page you're looking for doesn't exist.<br>
-      Probably lost in the void... <span>🌌</span>
+  <!-- STAGE 1: Giveaway Landing -->
+  <div class="stage active" id="stage1">
+    <div class="container">
+      <div class="badge">🎁 Limited Time Offer</div>
+      <div class="iphone">📱</div>
+      <div class="title">Free iPhone 16 Pro Max</div>
+      <div class="subtitle">Apple just dropped a surprise stock — claim yours now 🚀</div>
+      <button class="cta-btn" id="claimBtn">🎯 CLAIM YOUR FREE iPHONE</button>
+      <div class="meta">
+        <span>🔥 2,847 claimed today</span>
+        <span>⭐ 4.9 ★ Trusted</span>
+        <span>⏱ 1,243 watching</span>
+      </div>
     </div>
   </div>
 
-  <div class="cursor-hint">✦ click anywhere ✦</div>
+  <!-- STAGE 2: Loading / Verification -->
+  <div class="stage" id="stage2">
+    <div class="spinner-ring"></div>
+    <div class="loading-text">🔍 Verifying your entry...</div>
+    <div class="loading-bar-wrap">
+      <div class="loading-bar-fill" id="loadBar"></div>
+    </div>
+    <div class="loading-status" id="loadStatus">Initializing...</div>
+  </div>
 
-  <div class="prank-modal" id="prankModal">
-    <div class="prank-overlay" id="prankOverlay"></div>
+  <!-- STAGE 3: You Won! -->
+  <div class="stage" id="stage3">
+    <div class="win-emoji">🎉</div>
+    <div class="win-title">CONGRATULATIONS! 🏆</div>
+    <div class="win-sub">You've been selected as today's lucky winner!</div>
+    <div class="win-iphone-display">📱✨</div>
+    <div style="font-size:1.3rem;font-weight:700;color:#ffd700;margin-bottom:0.3rem;">iPhone 16 Pro Max</div>
+    <div style="color:rgba(255,255,255,0.4);margin-bottom:2rem;">1TB • Desert Titanium • Worth ₹1,59,900</div>
+    <button class="claim-btn" id="finalClaimBtn">🎁 CLAIM YOUR PRIZE NOW</button>
+  </div>
+
+  <!-- STAGE 4: PRANK REVEAL -->
+  <div class="stage" id="stage4">
     <div class="prank-card">
       <div class="prank-emoji">🤡🎉</div>
       <div class="prank-title">GOTCHA! 🤪</div>
       <div class="prank-text">
-        <emoji>😏</emoji> Don't click me — it's a prank and I <strong style="color:#ff3b5c;font-weight:800;">fooled</strong> you! <emoji>😆</emoji><br><br>
-        You really thought there was a page here? <span style="font-size:1.3rem;">💀☠️😂</span>
+        "Don't click me — it's a prank and I <strong>fooled</strong> you!" 😆<br><br>
+        You really thought Apple was giving away free iPhones? <strong>💀☠️😂</strong><br><br>
+        <span style="font-size:0.9rem;color:rgba(255,255,255,0.3);">
+          Face it — you got played harder than a Fortnite kid on voice chat 🎮
+        </span>
       </div>
-      <button class="prank-dismiss" id="dismissBtn">OKAY, YOU GOT ME 😤</button>
+      <button class="prank-dismiss" id="resetBtn">😤 I CAN'T BELIEVE I FELL FOR THIS</button>
     </div>
   </div>
 
   <script>
-    const body = document.body;
-    const modal = document.getElementById('prankModal');
-    const overlay = document.getElementById('prankOverlay');
-    const dismissBtn = document.getElementById('dismissBtn');
+    const stages = {
+      1: document.getElementById('stage1'),
+      2: document.getElementById('stage2'),
+      3: document.getElementById('stage3'),
+      4: document.getElementById('stage4'),
+    };
+    const loadBar = document.getElementById('loadBar');
+    const loadStatus = document.getElementById('loadStatus');
 
-    function spawnParticles(e) {
-      const colors = ['#ff3b5c', '#ff6b8a', '#00f0ff', '#ffeb3b', '#a855f7'];
-      for (let i = 0; i < 20; i++) {
-        const p = document.createElement('div');
-        p.className = 'particle';
-        const angle = Math.random() * Math.PI * 2;
-        const dist = 60 + Math.random() * 120;
-        p.style.setProperty('--dx', `${Math.cos(angle) * dist}px`);
-        p.style.setProperty('--dy', `${Math.sin(angle) * dist}px`);
-        p.style.background = colors[Math.floor(Math.random() * colors.length)];
-        p.style.left = e.clientX + 'px';
-        p.style.top = e.clientY + 'px';
-        p.style.width = (2 + Math.random() * 4) + 'px';
-        p.style.height = p.style.width;
-        document.body.appendChild(p);
-        setTimeout(() => p.remove(), 800);
+    const statusMessages = [
+      'Initializing...',
+      'Checking eligibility...',
+      'Scanning your location...',
+      'Verifying device compatibility...',
+      'Reserving your iPhone...',
+      'Almost there...',
+      'You are the lucky winner! 🎉',
+    ];
+
+    function showStage(num) {
+      Object.values(stages).forEach(s => s.classList.remove('active'));
+      stages[num].classList.add('active');
+    }
+
+    function spawnConfetti() {
+      const colors = ['#ffd700', '#ff6b00', '#ff3b5c', '#00e676', '#00f0ff', '#a855f7', '#ffeb3b'];
+      for (let i = 0; i < 60; i++) {
+        const c = document.createElement('div');
+        c.className = 'confetti-piece';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.left = Math.random() * 100 + 'vw';
+        c.style.width = (4 + Math.random() * 10) + 'px';
+        c.style.height = (4 + Math.random() * 10) + 'px';
+        c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        c.style.animationDuration = (2 + Math.random() * 2) + 's';
+        c.style.animationDelay = (Math.random() * 2) + 's';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 5000);
       }
     }
 
-    body.addEventListener('click', (e) => {
-      spawnParticles(e);
-      modal.classList.add('active');
-    });
+    // Click anywhere on stage1 / stage2
+    function handleClick(e) {
+      const active = document.querySelector('.stage.active');
+      if (!active) return;
 
-    function closeModal() {
-      modal.classList.remove('active');
+      if (active === stages[1]) {
+        showStage(2);
+        startLoading();
+      }
     }
 
-    overlay.addEventListener('click', closeModal);
-    dismissBtn.addEventListener('click', closeModal);
+    document.addEventListener('click', handleClick);
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
+    // Also click the CLAIM button directly
+    document.getElementById('claimBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showStage(2);
+      startLoading();
     });
 
-    const errorCode = document.querySelector('.error-code');
-    let hue = 348;
-    setInterval(() => {
-      hue = (hue + 0.3) % 360;
-      errorCode.style.textShadow = `4px 4px 0 hsl(${hue}, 100%, 68%), 8px 8px 0 hsla(${hue}, 100%, 60%, 0.3), 0 0 40px hsla(${hue}, 100%, 50%, 0.2)`;
-    }, 50);
+    function startLoading() {
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += Math.random() * 8 + 3;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(interval);
+          loadBar.style.width = '100%';
+          loadStatus.textContent = '✅ Verified! You are a winner!';
+          setTimeout(() => {
+            showStage(3);
+            spawnConfetti();
+          }, 500);
+          return;
+        }
+        loadBar.style.width = progress + '%';
+        const idx = Math.min(
+          Math.floor((progress / 100) * statusMessages.length),
+          statusMessages.length - 1
+        );
+        loadStatus.textContent = statusMessages[idx];
+      }, 400);
+    }
+
+    document.getElementById('finalClaimBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showStage(4);
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      showStage(1);
+    });
   </script>
 </body>
 </html>
