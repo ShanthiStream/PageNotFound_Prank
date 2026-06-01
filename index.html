@@ -1,462 +1,1132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🎉 iPhone 16 Pro Max Giveaway</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>iPhone 18 — Giveaway (Scam Awareness)</title>
+  <link rel="stylesheet" href="https://www.apple.com/wss/fonts?families=SF+Pro,v3|SF+Pro+Icons,v3" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(ellipse at center, #0a0a14 0%, #000 100%);
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      cursor: pointer;
-      user-select: none;
-      overflow: hidden;
-    }
-    .container {
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    .container.hidden {
-      display: none;
-    }
-    .badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #ffd700, #ff6b00);
-      color: #000;
-      font-weight: 800;
-      font-size: 0.75rem;
-      padding: 0.4rem 1.2rem;
-      border-radius: 50px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      animation: pulse-badge 1.5s ease-in-out infinite;
-    }
-    @keyframes pulse-badge {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-      50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
-    }
-    .iphone {
-      font-size: clamp(5rem, 15vw, 9rem);
-      display: block;
-      margin-bottom: 0.5rem;
-      animation: float-phone 3s ease-in-out infinite;
-      filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.2));
-    }
-    @keyframes float-phone {
-      0%, 100% { transform: translateY(0) rotate(-5deg); }
-      50% { transform: translateY(-12px) rotate(5deg); }
-    }
-    .title {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 900;
-      background: linear-gradient(135deg, #ffd700, #ff6b00, #ff4500);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.2;
-      margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      margin-bottom: 2rem;
-    }
-    .cta-btn {
-      background: linear-gradient(135deg, #ffd700, #ff6b00);
-      border: none;
-      color: #000;
-      font-weight: 800;
-      font-size: 1.1rem;
-      padding: 1rem 3rem;
-      border-radius: 60px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      letter-spacing: 1px;
-      animation: glow-cta 2s ease-in-out infinite;
-    }
-    @keyframes glow-cta {
-      0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-      50% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.6); }
-    }
-    .cta-btn:hover {
-      transform: translateY(-3px) scale(1.02);
-    }
-    .cta-btn:active {
-      transform: translateY(0) scale(0.98);
-    }
-    .meta {
-      color: rgba(255, 255, 255, 0.2);
-      font-size: 0.75rem;
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .click-hint {
-      position: fixed;
-      bottom: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      color: rgba(255, 255, 255, 0.1);
-      font-size: 0.75rem;
-      letter-spacing: 2px;
-      animation: pulse-hint 2s ease-in-out infinite;
-      z-index: 1;
-    }
-    @keyframes pulse-hint {
-      0%, 100% { opacity: 0.1; }
-      50% { opacity: 0.4; }
+      font-family: "SF Pro Display", "SF Pro", "Helvetica Neue", sans-serif;
+      background: #fff;
+      color: #1d1d1f;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    .stage {
+    @keyframes screen-flash {
+      0% { background-color: transparent; }
+      50% { background-color: rgba(255,215,0,0.15); }
+      100% { background-color: transparent; }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,113,227,0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(0,113,227,0); }
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      15% { transform: scale(1.15); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.1); }
+      60% { transform: scale(1); }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      10%, 50%, 90% { transform: translateX(-6px); }
+      30%, 70% { transform: translateX(6px); }
+    }
+    @keyframes type-cursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes fade-up {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes countdown-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    @keyframes flash-border {
+      0%, 100% { border-color: #d2d2d7; box-shadow: 0 0 0 0 rgba(255,45,85,0); }
+      50% { border-color: #ff2d55; box-shadow: 0 0 0 4px rgba(255,45,85,0.2); }
+    }
+    @keyframes drumroll {
+      0% { transform: rotateY(0) rotateX(0) scale(1); }
+      10% { transform: rotateY(360deg) rotateX(5deg) scale(1.02); }
+      25% { transform: rotateY(1080deg) rotateX(-8deg) scale(0.98); }
+      40% { transform: rotateY(1800deg) rotateX(12deg) scale(1.03); }
+      55% { transform: rotateY(2520deg) rotateX(-5deg) scale(0.97); }
+      70% { transform: rotateY(3240deg) rotateX(8deg) scale(1.01); }
+      85% { transform: rotateY(3960deg) rotateX(-3deg) scale(0.99); }
+      100% { transform: rotateY(4320deg) rotateX(0) scale(1); }
+    }
+    @keyframes spotlight {
+      0% { opacity: 0; transform: scale(0.8); filter: brightness(2); }
+      50% { opacity: 1; transform: scale(1.05); filter: brightness(1.3); }
+      100% { opacity: 1; transform: scale(1); filter: brightness(1); }
+    }
+
+    /* ── Apple.com Nav (transparent, overlapping) ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 44px;
+      z-index: 100;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-inner {
+      width: 100%;
+      max-width: 980px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+    }
+    .nav-logo {
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      opacity: 0.92;
+    }
+    .nav-logo svg { width: 16px; height: 44px; display: block; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: -0.01em;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+
+    /* ── Nav overlap spacer ── */
+    .nav-spacer { height: 44px; }
+
+    /* ── Sections ── */
+    .section {
+      width: 100%;
+    }
+    .section {
       display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .section-light {
+      background: #fff;
+      color: #1d1d1f;
+    }
+    .section-dark {
+      background: #000;
+      color: #f5f5f7;
+    }
+    .section-dark .hero-sub,
+    .section-dark .hero-price,
+    .section-dark .toss-sub,
+    .section-dark .loader-status,
+    .section-dark .hero-meta span { color: #86868b; }
+    .section-dark .hero-price strong { color: #f5f5f7; }
+    .section-dark .hero-label { background: rgba(255,255,255,0.12); color: #f5f5f7; }
+
+    .section-content {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    @media (max-width: 480px) {
+      .section-content { padding: 60px 18px; }
+    }
+
+    /* ── Hero section — full viewport ── */
+    .hero-full {
+      min-height: calc(100vh - 44px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #1d1d1f;
+      background: #e8e8ed;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* ── Hero elements ── */
+    .hero-phone {
+      font-size: clamp(7rem, 18vw, 11rem);
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.08));
+      animation: float-phone 4s ease-in-out infinite;
+    }
+    @keyframes float-phone {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.08;
+      margin-bottom: 6px;
+    }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+      color: #6e6e73;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .hero-price {
+      font-size: 15px;
+      color: #6e6e73;
+      margin-bottom: 36px;
+    }
+    .hero-price strong { color: #1d1d1f; font-weight: 600; }
+
+    .hero-prompt {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* ── Tiny social proof ── */
+    .hero-meta {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      font-size: 12px;
+      color: #6e6e73;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* ── Buttons (Apple.com style) ── */
+    .btn-group {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+    .btn {
+      font-family: inherit;
+      font-size: 17px;
+      font-weight: 400;
+      padding: 11px 28px;
+      border-radius: 980px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: #0071e3;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #0077ED; }
+    .btn-primary:active { background: #006EDB; }
+    .btn-dramatic {
+      position: relative;
+      overflow: hidden;
+      min-width: 140px;
+      justify-content: center;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    .btn-dramatic:hover { animation: heartbeat 0.6s ease-in-out; }
+    .btn-icon { font-size: 18px; }
+    #countdown {
+      color: #ff2d55;
+      animation: countdown-pulse 1s ease-in-out infinite;
+      font-family: "SF Mono", monospace;
+    }
+    .badge.urgent { background: #ff2d55; color: #fff; animation: pulse-glow 1.5s ease-in-out infinite; }
+
+    .btn-secondary {
+      background: #e8e8ed;
+      color: #1d1d1f;
+    }
+    .btn-secondary:hover { background: #d3d3d8; }
+
+    .btn-success {
+      background: #00a34a;
+      color: #fff;
+    }
+    .btn-success:hover { background: #00b34f; }
+    .btn-success:active { background: #009343; }
+
+    .btn-link {
+      background: none;
+      color: #0071e3;
+      font-size: 19px;
+      font-weight: 400;
+      padding: 0;
+      border-radius: 0;
+    }
+    .btn-link:hover { color: #0077ED; text-decoration: underline; }
+    .btn-link::after { content: " ›"; font-size: 22px; font-weight: 300; }
+
+    /* ── Coin Toss (dark section) ── */
+    .coin-wrap {
+      perspective: 800px;
+      margin: 0 auto 24px;
+      width: 170px;
+      height: 170px;
+    }
+    .coin {
+      width: 170px;
+      height: 170px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.22, 0.68, 0, 1);
+      border-radius: 50%;
+    }
+    .coin.flipping {
+      animation: coin-flip-3d 1.4s cubic-bezier(0.22, 0.68, 0, 1) forwards;
+    }
+    @keyframes coin-flip-3d {
+      0% { transform: rotateY(0) rotateX(0) scale(1); }
+      10% { transform: rotateY(360deg) rotateX(5deg) scale(1.02); }
+      25% { transform: rotateY(1080deg) rotateX(-8deg) scale(0.97); }
+      40% { transform: rotateY(1800deg) rotateX(12deg) scale(1.03); }
+      55% { transform: rotateY(2520deg) rotateX(-5deg) scale(0.96); }
+      70% { transform: rotateY(3240deg) rotateX(8deg) scale(1.02); }
+      85% { transform: rotateY(3960deg) rotateX(-3deg) scale(0.98); }
+      100% { transform: rotateY(4320deg) rotateX(0) scale(1); }
+    }
+    .coin-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #333;
+      background: linear-gradient(145deg, #2a2a2e, #1c1c1f);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .coin-face-inner {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      min-height: 100vh;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
     }
-    .stage.active {
-      display: flex;
+    .coin-face-inner.heads {
+      border: 3px solid #b8860b;
+      background: radial-gradient(circle, #3a2e00, #1a1400);
+    }
+    .coin-face-inner.tails {
+      border: 3px solid #555;
+      background: radial-gradient(circle, #2a2a2e, #18181a);
+    }
+    .coin-face-label {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+    .coin-face-label.heads { color: #ffd700; }
+    .coin-face-label.tails { color: #a0a0a8; }
+    .coin-face-icon { font-size: 20px; margin-bottom: 2px; }
+    .coin-face-back { transform: rotateY(180deg); }
+    .coin.result-heads { transform: rotateY(0); }
+    .coin.result-tails { transform: rotateY(180deg); }
+
+    .toss-result {
+      font-size: 24px;
+      font-weight: 700;
+      color: #f5f5f7;
+      margin-bottom: 6px;
+      min-height: 36px;
+    }
+    .toss-result.reveal {
+      animation: spotlight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    .toss-sub {
+      font-size: 16px;
+      color: #86868b;
+      margin-bottom: 16px;
+    }
+    .toss-suspense {
+      font-size: 14px;
+      color: #ffd700;
+      min-height: 22px;
+      margin-bottom: 24px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .toss-suspense.show { opacity: 1; }
+    .toss-suspense .cursor { animation: type-cursor 0.8s step-end infinite; }
+    .result-flash {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0;
+    }
+    .result-flash.show {
+      animation: screen-flash 1s ease-out forwards;
     }
 
-    .spinner-ring {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 4px solid rgba(255, 215, 0, 0.1);
-      border-top-color: #ffd700;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 2rem;
+    /* ── Loading bar ── */
+    .loader-wrap {
+      width: 240px;
+      max-width: 70vw;
+      margin: 20px auto 0;
     }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    .loading-text {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-    .loading-bar-wrap {
-      width: 280px;
-      max-width: 80vw;
-      height: 6px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      margin-top: 1.5rem;
+    .loader-bar {
+      width: 100%;
+      height: 4px;
+      background: #333;
+      border-radius: 4px;
       overflow: hidden;
     }
-    .loading-bar-fill {
+    .loader-fill {
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, #ffd700, #ff6b00);
-      border-radius: 10px;
+      background: #0071e3;
+      border-radius: 4px;
       transition: width 0.3s ease;
     }
-    .loading-status {
-      color: rgba(255, 255, 255, 0.3);
-      font-size: 0.8rem;
-      margin-top: 0.8rem;
-      font-family: monospace;
+    .loader-status {
+      font-size: 13px;
+      color: #86868b;
+      margin-top: 10px;
+      font-family: "SF Mono", monospace;
     }
 
-    .win-emoji {
-      font-size: 5rem;
-      margin-bottom: 0.5rem;
-      animation: bounce-win 1s ease-in-out infinite;
+    /* ── Stage 3: Form ── */
+    .form-card {
+      background: #f5f5f7;
+      border-radius: 18px;
+      padding: 40px 32px;
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: left;
+      animation: fade-up 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
     }
-    @keyframes bounce-win {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-10px) scale(1.1); }
+    #urgentBadge {
+      animation: countdown-pulse 0.6s ease-in-out infinite;
     }
-    .win-title {
-      font-size: clamp(2rem, 5vw, 2.8rem);
-      font-weight: 900;
-      background: linear-gradient(135deg, #ffd700, #ff6b00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.3rem;
+    .form-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1d1d1f;
+      letter-spacing: 0.02em;
+      display: block;
+      margin-bottom: 8px;
     }
-    .win-sub {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #d2d2d7;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 17px;
+      color: #1d1d1f;
+      background: #fff;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .win-iphone-display {
-      font-size: 6rem;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.3));
+    .form-input:focus {
+      border-color: #0071e3;
+      box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
     }
-    .claim-btn {
-      background: linear-gradient(135deg, #00c853, #00e676);
-      border: none;
-      color: #000;
-      font-weight: 800;
-      font-size: 1.2rem;
-      padding: 1.2rem 3.5rem;
-      border-radius: 60px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      letter-spacing: 1px;
-      animation: glow-claim 1.5s ease-in-out infinite;
-    }
-    @keyframes glow-claim {
-      0%, 100% { box-shadow: 0 0 20px rgba(0, 200, 83, 0.3); }
-      50% { box-shadow: 0 0 60px rgba(0, 200, 83, 0.6); }
-    }
-    .claim-btn:hover {
-      transform: translateY(-3px) scale(1.02);
-    }
+    .form-input::placeholder { color: #86868b; }
+    .form-btn { margin-top: 20px; width: 100%; justify-content: center; }
+    .form-error { color: #d32f2f; font-size: 13px; margin-top: 8px; display: none; }
+    .form-error.show { display: block; }
 
-    .prank-card {
-      background: linear-gradient(145deg, #1e1e32, #12121f);
-      border: 1px solid rgba(255, 59, 92, 0.3);
+    /* ── Stage 4: Awareness Card ── */
+    .section-awareness {
+      background: #f5f5f7;
+    }
+    .awareness-card {
+      background: #fff;
       border-radius: 24px;
-      padding: 3rem 2.5rem;
-      max-width: 480px;
-      width: 90%;
+      padding: 0;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: left;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px #e8e8ed, 0 20px 60px rgba(0,0,0,0.08);
       animation: card-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-      box-shadow: 0 0 80px rgba(255, 59, 92, 0.15);
+    }
+    #stage4.section.active .awareness-banner {
+      animation: shake 0.6s ease-in-out 0.3s both;
     }
     @keyframes card-pop {
-      0% { transform: scale(0.8) translateY(30px); opacity: 0; }
+      0% { transform: scale(0.85) translateY(30px); opacity: 0; filter: blur(4px); }
+      60% { transform: scale(1.02) translateY(-4px); opacity: 1; filter: blur(0); }
       100% { transform: scale(1) translateY(0); opacity: 1; }
     }
-    .prank-emoji {
-      font-size: 4.5rem;
-      margin-bottom: 0.5rem;
-      animation: wiggle 1.5s ease-in-out infinite;
+    .awareness-banner {
+      background: linear-gradient(135deg, #ff2d55, #c41e3a);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(0deg); }
-      20% { transform: rotate(-12deg); }
-      40% { transform: rotate(10deg); }
-      60% { transform: rotate(-6deg); }
-      80% { transform: rotate(4deg); }
-    }
-    .prank-title {
-      font-size: 2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #ff3b5c, #ff6b8a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.8rem;
-    }
-    .prank-text {
-      color: rgba(255, 255, 255, 0.75);
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-    .prank-text strong {
-      color: #ff3b5c;
-    }
-    .prank-dismiss {
-      background: linear-gradient(135deg, #ff3b5c, #d62d4a);
-      border: none;
-      color: white;
+    .awareness-banner svg { width: 18px; height: 44px; flex-shrink: 0; filter: brightness(0) invert(1); }
+    .awareness-banner-text {
+      color: #fff;
+      font-size: 15px;
       font-weight: 700;
-      font-size: 1rem;
-      padding: 1rem 2.5rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      letter-spacing: 1px;
+      letter-spacing: 0.02em;
     }
-    .prank-dismiss:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(255, 59, 92, 0.35);
+    .awareness-body { padding: 28px 24px 24px; }
+    .awareness-greeting {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 6px;
+    }
+    .awareness-greeting-name { color: #0071e3; }
+    .awareness-desc {
+      font-size: 15px;
+      color: #6e6e73;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .awareness-desc strong { color: #1d1d1f; }
+
+    /* Comparison */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .compare-col {
+      border-radius: 14px;
+      padding: 18px 16px;
+    }
+    .compare-col.real { background: #f0f8f0; border: 1px solid #d4edda; }
+    .compare-col.fake { background: #fef0f0; border: 1px solid #fcc; }
+    .compare-head {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .compare-head svg { width: 14px; height: 36px; flex-shrink: 0; }
+    .compare-head.real-head { color: #1a7d36; }
+    .compare-head.fake-head { color: #c41e3a; }
+    .compare-item {
+      font-size: 13px;
+      color: #515154;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    .compare-item:first-of-type { border-top: none; padding-top: 0; }
+
+    /* Red flags */
+    .flags-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #c41e3a;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .flags-list { list-style: none; margin-bottom: 24px; }
+    .flags-list li {
+      font-size: 14px;
+      color: #1d1d1f;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .flags-list li:last-child { border-bottom: none; }
+    .flag-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .flag-icon.red { color: #c41e3a; }
+    .flag-icon.green { color: #1a7d36; }
+
+    /* Safety */
+    .safety-box {
+      background: #f5f7ff;
+      border: 1px solid #d0d9ff;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+    }
+    .safety-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0033cc;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .safety-list { list-style: none; }
+    .safety-list li {
+      font-size: 13px;
+      color: #1d1d1f;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .safety-list li::before {
+      content: "✓";
+      color: #0033cc;
+      font-weight: 700;
     }
 
+    .awareness-stat {
+      font-size: 14px;
+      color: #c41e3a;
+      text-align: center;
+      padding: 16px 24px 0;
+      line-height: 1.5;
+    }
+    .awareness-stat strong { font-weight: 700; }
+    .awareness-footer {
+      padding: 0 24px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .awareness-footer .btn { width: 100%; justify-content: center; }
+
+    /* ── Confetti ── */
     .confetti-piece {
       position: fixed;
-      width: 10px;
-      height: 10px;
       pointer-events: none;
       z-index: 999;
-      animation: confetti-fall 3s ease-in forwards;
+      animation: confetti-fall 3.5s ease-in forwards;
     }
     @keyframes confetti-fall {
-      0% { transform: translateY(-20vh) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
+      0%   { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+
+    /* ── Footer (Apple.com style) ── */
+    html, body { height: 100%; }
+    body { display: flex; flex-direction: column; }
+
+    .section.active {
+      flex: 1;
+    }
+
+    #stage2.section.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer {
+      flex-shrink: 0;
+      background: #f5f5f7;
+      border-top: 1px solid #e8e8ed;
+      padding: 16px 24px;
+      text-align: center;
+      font-size: 11px;
+      color: #6e6e73;
+    }
+    .footer-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #515154;
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: #1d1d1f; text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .compare-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 28px 20px; }
+      .awareness-body { padding: 20px 18px; }
+      .awareness-footer { padding: 0 18px 18px; }
+      .nav-inner { padding: 0 14px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="click-hint">✦ tap anywhere to claim ✦</div>
+  <!-- ═══ NAVBAR (Apple.com style — transparent/glass, overlapping) ═══ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg viewBox="0 0 14 44" xmlns="http://www.w3.org/2000/svg">
+          <path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802z" fill="rgba(255,255,255,0.92)"/>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Mac</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#" style="opacity:1">iPhone</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- STAGE 1: Giveaway Landing -->
-  <div class="stage active" id="stage1">
-    <div class="container">
-      <div class="badge">🎁 Limited Time Offer</div>
-      <div class="iphone">📱</div>
-      <div class="title">Free iPhone 16 Pro Max</div>
-      <div class="subtitle">Apple just dropped a surprise stock — claim yours now 🚀</div>
-      <button class="cta-btn" id="claimBtn">🎯 CLAIM YOUR FREE iPHONE</button>
-      <div class="meta">
-        <span>🔥 2,847 claimed today</span>
-        <span>⭐ 4.9 ★ Trusted</span>
-        <span>⏱ 1,243 watching</span>
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 1: Hero (Light) — Apple.com hero style -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section section-light active" id="stage1">
+    <div class="section-content hero-full">
+      <span class="badge" id="offerBadge">⚠ Offer Expires In: <strong id="countdown">04:59</strong></span>
+      <span class="hero-phone">📱</span>
+      <h1 class="hero-title">iPhone 18 Pro Max</h1>
+      <p class="hero-sub">
+        You've been <strong>randomly selected</strong> as a potential winner.<br>
+        Pick your luck to claim your prize.
+      </p>
+      <p class="hero-price">Worth <strong>₹1,99,900</strong> • 1TB • Rose Quartz</p>
+      <p class="hero-prompt" id="dramaticPrompt">👇 Choose your coin side</p>
+      <div class="btn-group">
+        <button class="btn btn-primary btn-dramatic" data-pick="heads"><span class="btn-icon">👑</span> Heads</button>
+        <button class="btn btn-primary btn-dramatic" data-pick="tails"><span class="btn-icon">🌿</span> Tails</button>
+      </div>
+      <div class="hero-meta">
+        <span>🔥 <strong>3,421</strong> claimed today</span>
+        <span>⭐ <strong>4.9</strong> Verified</span>
+        <span>⏱ <strong>892</strong> watching now</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- STAGE 2: Loading / Verification -->
-  <div class="stage" id="stage2">
-    <div class="spinner-ring"></div>
-    <div class="loading-text">🔍 Verifying your entry...</div>
-    <div class="loading-bar-wrap">
-      <div class="loading-bar-fill" id="loadBar"></div>
-    </div>
-    <div class="loading-status" id="loadStatus">Initializing...</div>
-  </div>
-
-  <!-- STAGE 3: You Won! -->
-  <div class="stage" id="stage3">
-    <div class="win-emoji">🎉</div>
-    <div class="win-title">CONGRATULATIONS! 🏆</div>
-    <div class="win-sub">You've been selected as today's lucky winner!</div>
-    <div class="win-iphone-display">📱✨</div>
-    <div style="font-size:1.3rem;font-weight:700;color:#ffd700;margin-bottom:0.3rem;">iPhone 16 Pro Max</div>
-    <div style="color:rgba(255,255,255,0.4);margin-bottom:2rem;">1TB • Desert Titanium • Worth ₹1,59,900</div>
-    <button class="claim-btn" id="finalClaimBtn">🎁 CLAIM YOUR PRIZE NOW</button>
-  </div>
-
-  <!-- STAGE 4: PRANK REVEAL -->
-  <div class="stage" id="stage4">
-    <div class="prank-card">
-      <div class="prank-emoji">🤡🎉</div>
-      <div class="prank-title">GOTCHA! 🤪</div>
-      <div class="prank-text">
-        "Don't click me — it's a prank and I <strong>fooled</strong> you!" 😆<br><br>
-        You really thought Apple was giving away free iPhones? <strong>💀☠️😂</strong><br><br>
-        <span style="font-size:0.9rem;color:rgba(255,255,255,0.3);">
-          Face it — you got played harder than a Fortnite kid on voice chat 🎮
-        </span>
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 2: Coin Toss (Dark) — Apple.com dark   -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section section-dark" id="stage2">
+    <div class="section-content">
+      <div class="result-flash" id="resultFlash"></div>
+      <div class="coin-wrap">
+        <div class="coin" id="coin">
+          <div class="coin-face">
+            <div class="coin-face-inner heads">
+              <span class="coin-face-icon">👑</span>
+              <span class="coin-face-label heads">HEADS</span>
+            </div>
+          </div>
+          <div class="coin-face coin-face-back">
+            <div class="coin-face-inner tails">
+              <span class="coin-face-icon">🌿</span>
+              <span class="coin-face-label tails">TAILS</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="prank-dismiss" id="resetBtn">😤 I CAN'T BELIEVE I FELL FOR THIS</button>
+      <div class="toss-result" id="tossResult"></div>
+      <div class="toss-sub" id="tossSub">Tap a side above to flip</div>
+      <div class="toss-suspense" id="tossSuspense"></div>
+
+      <div class="loader-wrap" id="tossLoader" style="display:none">
+        <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+        <div class="loader-status" id="loaderStatus">Processing your win...</div>
+      </div>
+
+      <div class="btn-group" id="tossActions" style="display:none; margin-top:28px;">
+        <button class="btn btn-success" id="claimPrizeBtn">🎉 Claim Your Prize</button>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 3: Form (Light)                        -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section section-light" id="stage3">
+    <div class="section-content">
+      <span class="badge" style="margin-bottom:14px;background:#ff2d55;color:#fff;" id="urgentBadge">⏳ Claim expiring soon!</span>
+      <h2 class="hero-title" style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px;">
+        <span id="stage3title">Almost Yours</span>
+      </h2>
+      <p class="hero-sub" style="margin-bottom:28px;">Enter your name to <strong>confirm your identity</strong> and claim.</p>
+      <div class="form-card" id="formCard">
+        <label class="form-label" for="userName">Full Name</label>
+        <input class="form-input" id="userName" type="text" placeholder="e.g. John Doe" autocomplete="name" />
+        <div class="form-error" id="formError">Please enter your full name (letters only, at least 2 characters).</div>
+        <button class="btn btn-primary form-btn" id="submitNameBtn">🚀 Confirm &amp; Claim</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SECTION 4: Awareness (Light gray bg)           -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section section-awareness" id="stage4">
+    <div class="section-content">
+      <div class="awareness-card">
+        <div class="awareness-banner">
+          <svg viewBox="0 0 14 44" xmlns="http://www.w3.org/2000/svg">
+            <path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802z" fill="white"/>
+          </svg>
+          <span class="awareness-banner-text">SCAM ALERT — This Was Not a Real Giveaway</span>
+        </div>
+
+        <div class="awareness-body">
+          <div class="awareness-greeting">
+            Hey <span class="awareness-greeting-name" id="userNameDisplay">there</span> 👋
+          </div>
+          <p class="awareness-desc">
+            You <strong>almost got scammed</strong> — and that's exactly why this page exists.
+            Scammers build fake websites that look <em>exactly</em> like real brands to trick people
+            just like you. Here's how this scam worked — and how to spot one next time.
+          </p>
+
+          <!-- Comparison -->
+          <div class="compare-grid">
+            <div class="compare-col real">
+              <div class="compare-head real-head">
+                <svg viewBox="0 0 14 44" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802z" fill="#1a7d36"/>
+                </svg>
+                Real Apple
+              </div>
+              <div class="compare-item"><span>🔗</span> apple.com</div>
+              <div class="compare-item"><span>🔒</span> HTTPS with padlock</div>
+              <div class="compare-item"><span>📱</span> Real products only</div>
+              <div class="compare-item"><span>📋</span> Terms &amp; privacy policy</div>
+              <div class="compare-item"><span>📞</span> Official support</div>
+            </div>
+            <div class="compare-col fake">
+              <div class="compare-head fake-head">
+                <svg viewBox="0 0 14 44" xmlns="http://www.w3.org/2000/svg" opacity="0.35" style="filter:grayscale(1) contrast(0.3);">
+                  <path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802z" fill="#c41e3a"/>
+                </svg>
+                Fake Scam Site
+              </div>
+              <div class="compare-item"><span>🔗</span> fφn-giveaway.xyz</div>
+              <div class="compare-item"><span>🔓</span> No valid certificate</div>
+              <div class="compare-item"><span>📱</span> iPhone 18 (doesn't exist!)</div>
+              <div class="compare-item"><span>📋</span> No legal pages</div>
+              <div class="compare-item"><span>📞</span> No way to contact</div>
+            </div>
+          </div>
+
+          <!-- Red Flags -->
+          <div class="flags-title">🚩 Red Flags You Missed</div>
+          <ul class="flags-list">
+            <li><span class="flag-icon red">🚫</span> iPhone 18 doesn't exist yet — Apple hasn't released it</li>
+            <li><span class="flag-icon red">🌐</span> The URL was <strong>not</strong> apple.com — always check the address bar</li>
+            <li><span class="flag-icon red">🎁</span> Apple never runs "random winner" giveaways on third-party sites</li>
+            <li><span class="flag-icon red">💳</span> No real giveaway asks for nothing — scams use urgency to skip your guard</li>
+            <li><span class="flag-icon green">💡</span> If it looks too good to be true, it <strong>always</strong> is.</li>
+          </ul>
+
+          <!-- Safety Tips -->
+          <div class="safety-box">
+            <div class="safety-title">🛡️ Stay Safe Online</div>
+            <ul class="safety-list">
+              <li>Always verify the website URL before clicking</li>
+              <li>Bookmark official sites — don't click from ads or emails</li>
+              <li>Never share personal info on unverified pages</li>
+              <li>Check for HTTPS, privacy policy, and contact pages</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <p class="awareness-stat">
+          👥 <strong id="scamCount">0</strong> people clicked "Claim Your Prize"
+          before you — scammers rely on urgency, not luck.
+        </p>
+        <div class="awareness-footer">
+          <button class="btn btn-primary" id="understoodBtn">I Understand — I'll Stay Safe</button>
+          <p style="font-size:12px;color:#86868b;">Share this with friends &amp; family so they don't fall for it 💙</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- APPLE.COM-STYLE FOOTER                          -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Legal</a>
+        <a href="#">Site Map</a>
+      </div>
+      <p>Copyright © 2026 Apple Inc. All rights reserved.</p>
+      <p style="color:#86868b;">This is a <strong>scam awareness</strong> demonstration. Not affiliated with Apple Inc.</p>
+    </div>
+  </footer>
 
   <script>
-    const stages = {
-      1: document.getElementById('stage1'),
-      2: document.getElementById('stage2'),
-      3: document.getElementById('stage3'),
-      4: document.getElementById('stage4'),
-    };
-    const loadBar = document.getElementById('loadBar');
-    const loadStatus = document.getElementById('loadStatus');
+    (function() {
+      const stages = {
+        1: document.getElementById('stage1'),
+        2: document.getElementById('stage2'),
+        3: document.getElementById('stage3'),
+        4: document.getElementById('stage4'),
+      };
+      const coin         = document.getElementById('coin');
+      const tossResult   = document.getElementById('tossResult');
+      const tossSub      = document.getElementById('tossSub');
+      const tossSuspense = document.getElementById('tossSuspense');
+      const tossLoader   = document.getElementById('tossLoader');
+      const loaderFill   = document.getElementById('loaderFill');
+      const loaderStatus = document.getElementById('loaderStatus');
+      const tossActions  = document.getElementById('tossActions');
+      const claimBtn     = document.getElementById('claimPrizeBtn');
+      const userNameInp  = document.getElementById('userName');
+      const formError    = document.getElementById('formError');
+      const submitBtn    = document.getElementById('submitNameBtn');
+      const nameDisplay  = document.getElementById('userNameDisplay');
+      const understoodBtn = document.getElementById('understoodBtn');
 
-    const statusMessages = [
-      'Initializing...',
-      'Checking eligibility...',
-      'Scanning your location...',
-      'Verifying device compatibility...',
-      'Reserving your iPhone...',
-      'Almost there...',
-      'You are the lucky winner! 🎉',
-    ];
+      let userPick = null;
+      let countdownInterval = null;
+      const suspenseMsgs = [
+        'Contacting server...',
+        'Verifying eligibility...',
+        'Loading encrypted payload...',
+        'Confirming your identity...',
+        'Fortune favors the bold...',
+        'Almost there...',
+      ];
 
-    function showStage(num) {
-      Object.values(stages).forEach(s => s.classList.remove('active'));
-      stages[num].classList.add('active');
-    }
-
-    function spawnConfetti() {
-      const colors = ['#ffd700', '#ff6b00', '#ff3b5c', '#00e676', '#00f0ff', '#a855f7', '#ffeb3b'];
-      for (let i = 0; i < 60; i++) {
-        const c = document.createElement('div');
-        c.className = 'confetti-piece';
-        c.style.background = colors[Math.floor(Math.random() * colors.length)];
-        c.style.left = Math.random() * 100 + 'vw';
-        c.style.width = (4 + Math.random() * 10) + 'px';
-        c.style.height = (4 + Math.random() * 10) + 'px';
-        c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-        c.style.animationDuration = (2 + Math.random() * 2) + 's';
-        c.style.animationDelay = (Math.random() * 2) + 's';
-        document.body.appendChild(c);
-        setTimeout(() => c.remove(), 5000);
+      function startCountdown(el, seconds) {
+        let remaining = seconds;
+        const m = String(Math.floor(remaining / 60)).padStart(2, '0');
+        const s = String(remaining % 60).padStart(2, '0');
+        el.textContent = `${m}:${s}`;
+        if (countdownInterval) clearInterval(countdownInterval);
+        countdownInterval = setInterval(() => {
+          remaining--;
+          if (remaining <= 0) { remaining = 5; }
+          const m = String(Math.floor(remaining / 60)).padStart(2, '0');
+          const s = String(remaining % 60).padStart(2, '0');
+          el.textContent = `${m}:${s}`;
+        }, 1000);
       }
-    }
 
-    // Click anywhere on stage1 / stage2
-    function handleClick(e) {
-      const active = document.querySelector('.stage.active');
-      if (!active) return;
-
-      if (active === stages[1]) {
-        showStage(2);
-        startLoading();
+      function showStage(num) {
+        Object.values(stages).forEach(s => s.classList.remove('active'));
+        stages[num].classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-    }
 
-    document.addEventListener('click', handleClick);
+      function spawnConfetti(count) {
+        count = count || 70;
+        const colors = ['#ff2d55','#0071e3','#ffd700','#00a34a','#ff9500','#af52de','#5ac8fa','#ff3b30'];
+        for (let i = 0; i < count; i++) {
+          const c = document.createElement('div');
+          c.className = 'confetti-piece';
+          c.style.cssText = `
+            left:${Math.random()*100}vw; top:-10px;
+            width:${5+Math.random()*8}px; height:${5+Math.random()*8}px;
+            background:${colors[Math.floor(Math.random()*colors.length)]};
+            border-radius:${Math.random()>0.5?'50%':'2px'};
+            animation-delay:${Math.random()*1.5}s;
+            animation-duration:${2.5+Math.random()*2}s;
+          `;
+          document.body.appendChild(c);
+          setTimeout(() => c.remove(), 5000);
+        }
+      }
 
-    // Also click the CLAIM button directly
-    document.getElementById('claimBtn').addEventListener('click', (e) => {
-      e.stopPropagation();
-      showStage(2);
-      startLoading();
-    });
+      function typeSuspense(el, texts, idx, cb) {
+        if (idx >= texts.length) { if (cb) cb(); return; }
+        el.classList.add('show');
+        el.textContent = '▸ ' + texts[idx] + ' ';
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        cursor.textContent = '█';
+        el.appendChild(cursor);
+        setTimeout(() => typeSuspense(el, texts, idx + 1, cb), 400 + Math.random() * 300);
+      }
 
-    function startLoading() {
-      let progress = 0;
-      const interval = setInterval(() => {
-        progress += Math.random() * 8 + 3;
-        if (progress >= 100) {
-          progress = 100;
-          clearInterval(interval);
-          loadBar.style.width = '100%';
-          loadStatus.textContent = '✅ Verified! You are a winner!';
+      // ─── Stage 1: Countdown + Pick ───
+      startCountdown(document.getElementById('countdown'), 299);
+
+      document.querySelectorAll('[data-pick]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (countdownInterval) clearInterval(countdownInterval);
+          userPick = btn.dataset.pick;
+          showStage(2);
+          startCoinToss();
+        });
+      });
+
+      // ─── Stage 2: Dramatic Rigged Coin Toss ───
+      function startCoinToss() {
+        const flash = document.getElementById('resultFlash');
+        const suspense = document.getElementById('tossSuspense');
+        flash.classList.remove('show');
+        tossResult.textContent = '';
+        tossResult.className = 'toss-result';
+        tossSub.textContent = 'Flipping your coin...';
+        tossSuspense.textContent = '';
+        tossSuspense.classList.remove('show');
+        tossLoader.style.display = 'none';
+        tossActions.style.display = 'none';
+        coin.className = 'coin flipping';
+
+        // suspense texts during flip
+        typeSuspense(suspense, [
+          'Initiating coin toss...',
+          'Decrypting quantum seed...',
+          'Calculating your luck...',
+          'Consulting the fates...',
+          'The universe aligns...',
+        ], 0);
+
+        setTimeout(() => {
+          // dramatic pause before reveal
+          tossSub.textContent = 'The result is...';
+          suspense.textContent = '▪ ▪ ▪';
+          coin.style.transition = 'none';
+          coin.className = 'coin';
+
           setTimeout(() => {
-            showStage(3);
-            spawnConfetti();
-          }, 500);
+            // REVEAL with flash
+            coin.style.transition = '';
+            coin.className = `coin result-${userPick}`;
+            tossResult.textContent = `🎉 ${userPick.toUpperCase()}!`;
+            tossResult.className = 'toss-result reveal';
+            tossSub.textContent = 'You won! Claim your iPhone 18 Pro Max below.';
+            suspense.textContent = '';
+
+            flash.classList.add('show');
+            setTimeout(() => flash.classList.remove('show'), 1200);
+
+            tossLoader.style.display = 'block';
+            loaderFill.style.width = '0%';
+            loaderStatus.textContent = 'Registering your win...';
+            spawnConfetti(30);
+
+            let progress = 0;
+            const msgs = [
+              'Registering your win...',
+              'Verifying coin toss...',
+              'Reserving your device...',
+              'Almost done...',
+              'Ready to claim!',
+            ];
+            const iv = setInterval(() => {
+              progress += Math.random() * 10 + 5;
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(iv);
+                loaderFill.style.width = '100%';
+                loaderStatus.textContent = 'Ready!';
+                spawnConfetti(50);
+                setTimeout(() => {
+                  tossLoader.style.display = 'none';
+                  tossActions.style.display = 'flex';
+                }, 400);
+                return;
+              }
+              loaderFill.style.width = progress + '%';
+              const idx = Math.min(Math.floor(progress / 100 * msgs.length), msgs.length - 1);
+              loaderStatus.textContent = msgs[idx];
+            }, 250);
+          }, 900);
+        }, 2400);
+      }
+
+      claimBtn.addEventListener('click', () => {
+        fetch('/api/count', { method: 'POST' }).catch(() => {});
+        startCountdown(document.getElementById('countdown'), 59);
+        showStage(3);
+      });
+
+      function handleNameSubmit() {
+        const name = userNameInp.value.trim();
+        const valid = /^[a-zA-Z\s.\-']{2,}$/.test(name);
+        if (!valid) {
+          formError.classList.add('show');
+          document.getElementById('formCard').style.animation = 'shake 0.4s ease-in-out';
+          setTimeout(() => document.getElementById('formCard').style.animation = '', 500);
           return;
         }
-        loadBar.style.width = progress + '%';
-        const idx = Math.min(
-          Math.floor((progress / 100) * statusMessages.length),
-          statusMessages.length - 1
-        );
-        loadStatus.textContent = statusMessages[idx];
-      }, 400);
-    }
+        formError.classList.remove('show');
+        nameDisplay.textContent = name;
+        showStage(4);
+        fetch('/api/count').then(r => r.json()).then(d => {
+          document.getElementById('scamCount').textContent = d.count || 0;
+        }).catch(() => {});
+        spawnConfetti(120);
+      }
+      submitBtn.addEventListener('click', handleNameSubmit);
+      userNameInp.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') handleNameSubmit();
+      });
 
-    document.getElementById('finalClaimBtn').addEventListener('click', (e) => {
-      e.stopPropagation();
-      showStage(4);
-    });
+      understoodBtn.addEventListener('click', () => {
+        showStage(1);
+        userPick = null;
+        coin.className = 'coin';
+        tossResult.textContent = '';
+        tossResult.className = 'toss-result';
+        tossSub.textContent = 'Tap a side above to flip';
+        document.getElementById('tossSuspense').textContent = '';
+        document.getElementById('tossSuspense').classList.remove('show');
+        tossLoader.style.display = 'none';
+        tossActions.style.display = 'none';
+        userNameInp.value = '';
+        formError.classList.remove('show');
+        document.getElementById('formCard').style.animation = '';
+        startCountdown(document.getElementById('countdown'), 299);
+      });
 
-    document.getElementById('resetBtn').addEventListener('click', (e) => {
-      e.stopPropagation();
-      showStage(1);
-    });
+    })();
   </script>
 </body>
 </html>
